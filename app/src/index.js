@@ -1,8 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React,{ Component } from 'react';
+import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class App extends Component {
+	render() {
+		return (
+			<div>HELLO,MY ITEM!</div>
+		)
+	}
+}
+
+ReactDOM.render(<App/ >,document.getElementById('root'));
 registerServiceWorker();
