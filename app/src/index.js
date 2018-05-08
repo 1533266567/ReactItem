@@ -1,11 +1,12 @@
 import React,{ Component } from 'react';
 import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker';
+import Car from './container/car.js'
 
 class App extends Component {
 	render() {
 		return (
-			<div>HELLO,MY ITEM!</div>
+			<Car />
 		)
 	}
 }
