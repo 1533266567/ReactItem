@@ -10,23 +10,28 @@
     border: 0;
     font-style: normal;
     font-weight: normal;
+    font-size: 14PX;
 }
 html,body {
 	width: 100%;
 	background: #eee;
 }
+input {
+	border: none;
+	outline: none;
+}
 
 .car {
 	width: 100%;
-	height: 80px;
 	position: relative;
-	background: #fff;
 	color: #333;
-	line-height: 80px;
 }
 .car-header {
 	width: 100%;
-	height: 100%;
+	height: 80px;
+	line-height: 80px;
+	position: relative;
+	background: #fff;
 }
 .car-header h2 {
 	width: 100%;
@@ -34,9 +39,137 @@ html,body {
 	text-align: center;
 	font-size: 16PX;
 }
-.car span {
+.car .edit {
 	position: absolute;
 	right: 20px;
 	top: 0px;
 	font-size: 12PX;
+}
+.car-list {
+	margin-top: 10px;
+	line-height: 1;
+}
+.product-title {
+	width: 100%;
+	height: 80px;
+	padding-left: 80px;
+	font-size: 14PX;
+	background: #fff;
+	line-height: 80px;
+}
+.car-list li {
+	border-bottom: 1px solid #eee;
+	background: #fafafa;
+}
+.product-content {
+	display: flex; 
+	padding: 20px;
+	align-items: center
+}
+.product_icon {
+	 display: block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #999999;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.product-content .on {
+    background: url(./images/check.png) no-repeat;
+    background-size: 100% 100%;
+    border: none !important;
+}
+.product-content img {
+	width: 140px;
+	height: 140px;
+	overflow: hidden;
+	position: relative;
+	margin:0 15px 0 15px;
+}
+.product-info {
+	position: relative;
+	height: 140px;
+	flex: 1;
+}
+.product-info h3 {
+	font-size: 14PX;
+	color: #333;
+}
+.opeat-btn {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	display: flex;
+	border: 1px solid #ccc;
+}
+.opeat-btn  input {
+	border-left: 1px solid #cccccc;
+    border-right: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #fff; 
+}
+.opeat-btn span {
+	width:40px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    color: #333;
+    display: inline-block
+}
+.price {
+	font-size: 12PX;
+	display: block;
+	margin-top: 20px;
+}
+
+footer {
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    height: 100px;
+    display: flex;
+}
+.footer-left {
+	width: 530px;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    display: flex;
+    background: #fff;
+}
+.all-choose {
+	display: flex;
+	-webkit-align-items: center;
+    align-items: center;
+}
+.all-choose span {
+	font-size: 16PX;
+	margin-left: 10px;
+}
+.footer-price {
+	display: flex;
+	flex-direction: column;
+	font-size: 12PX;
+}
+.footer-price em {
+	color: #f42323;
+}
+.footer_tip {
+	text-align: right;
+}
+
+.footer-right {
+	width: 220px;
+    height: 100%;
+    background: #f42323;
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
 }
