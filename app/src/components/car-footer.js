@@ -1,17 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import { selectAllProduct } from '../store/car/car-action'
 import '../asset/index.css'
 
 class CarFooter extends React.Component {
 	constructor(props) {
 		super(props)
 	}
-
+	onChoseAll() {
+		this.props.selectAllProduct();
+	}
 	render() {
+		let isAllChose = this.props.proData.dataList.every((ele)=>{
+			return ele.selectStatus == true
+		})
 		return (
 			<footer>
 				<div className="footer-left">
-					<div className="all-choose">
-						<i className="product_icon"></i>
+					<div className="all-choose" onClick={this.onChoseAll.bind(this)}>
+						<i className={`product_icon ${isAllChose ? 'on':''}` }></i>
 						<span>全选</span>
 					</div>
 					<div className="footer-price">
@@ -30,4 +37,4 @@ class CarFooter extends React.Component {
 	}
 }
 
-export default CarFooter;
+export default connect( state => ({ proData: state.proData,}),{selectAllProduct} )(CarFooter);

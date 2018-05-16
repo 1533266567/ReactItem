@@ -1,0 +1,12 @@
+
+export const GETPRODUCTION = 'GETPRODUCTION';
+
+export const EDITPRODUCTION = 'EDITPRODUCTION';
+
+export const TOGGLESELECT = 'TOGGLESELECT';
+
+export const SELECTALLPRO = 'SELECTALLPRO';
+
+export const ADDPRONUM = 'ADDPRONUM';
+
+export const REDUCEPRONUM = 'REDUCEPRONUM';

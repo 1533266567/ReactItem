@@ -1,22 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { getProduct,selectProduct  } from '../action/car-action';
+import { getProduct,selectProduct,addProductNum,reduceProductNum } from '../store/car/car-action';
 import '../asset/index.css';
 
 class CarList extends React.Component {
 	constructor(props) {
 		super(props)
-		// this.state = {
-		// 	iconState: [true,true,true,true]
-		// }
 	}
 	changeIconState(index) {
 		this.props.selectProduct(index);
-		// let stateList = this.state.iconState;
-		// stateList[index] = !stateList[index];
-		// this.setState({
-		// 	iconState:stateList
-		// })
+	}
+	addAcount(index) {
+		this.props.addProductNum(index);
+	}
+	reudceAcount(index) {
+		this.props.reduceProductNum(index);
 	}
 	componentWillMount() {
 		this.props.getProduct();
@@ -35,9 +33,9 @@ class CarList extends React.Component {
 									<h3>{ele.title}</h3>
 									<span className="price">¥{ele.price}</span>
 									<div className="opeat-btn">
-										<span>-</span>
+										<span onClick={this.reudceAcount.bind(this,index)}>-</span>
 										<input value={ele.num} readOnly/>
-										<span>+</span>
+										<span onClick={this.addAcount.bind(this,index)}>+</span>
 									</div>	
 								</div>
 							</div>
@@ -49,4 +47,4 @@ class CarList extends React.Component {
 	}
 }
 
-export default connect( state => ({ proData: state.proData,}),{getProduct,selectProduct} )(CarList);
+export default connect( state => ({ proData: state.proData,}),{getProduct,selectProduct,addProductNum,reduceProductNum} )(CarList);

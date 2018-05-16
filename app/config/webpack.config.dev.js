@@ -205,7 +205,9 @@ module.exports = {
                     postcssWriteSvg({
                         utf8: false
                     }),
-                    postcssCssnext({}),
+                    postcssCssnext({
+                       autoprefixer: false, 
+                    }),
                     postcssViewportUnits({}),
                     cssnano({
                       preset: "advanced", 

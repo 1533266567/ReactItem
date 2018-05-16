@@ -1,21 +1,14 @@
 import React,{ Component } from 'react';
 import ReactDOM from 'react-dom'
 import registerServiceWorker from './registerServiceWorker';
-
+import Routers from './router'
 import {Provider} from 'react-redux';
 import store from './store/index';
-import Car from './container/car.js';
+import App from './components/App.js';
 
-class App extends Component {
-	render() {
-		return (
-			<Car />
-		)
-	}
-}
 
 ReactDOM.render( <Provider store={store}>  
-        			<App />  
+					<Routers />
     	    	</Provider>,document.getElementById('root'));
 
 registerServiceWorker();

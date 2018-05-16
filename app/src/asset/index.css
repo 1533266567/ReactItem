@@ -45,6 +45,21 @@ input {
 	top: 0px;
 	font-size: 12PX;
 }
+.icon-back {
+	position: absolute;
+	left: 30px;
+	top: 0;
+}
+.icon-back::after {
+	content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    transform: rotate(-135deg);
+    border-width: 2px 2px 0 0;
+    border-color: #999;
+    border-style: solid;
+}
 .car-list {
 	margin-top: 10px;
 	line-height: 1;
@@ -74,7 +89,8 @@ input {
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
-.product-content .on {
+.product-content .on,
+.all-choose .on {
     background: url(./images/check.png) no-repeat;
     background-size: 100% 100%;
     border: none !important;
