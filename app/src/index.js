@@ -4,11 +4,18 @@ import registerServiceWorker from './registerServiceWorker';
 import Routers from './router'
 import {Provider} from 'react-redux';
 import store from './store/index';
+
 import App from './components/App.js';
 
+import 'weui';
+import 'react-weui/build/packages/react-weui.css';
 
-ReactDOM.render( <Provider store={store}>  
-					<Routers />
-    	    	</Provider>,document.getElementById('root'));
+import Test from './test/index'
 
-registerServiceWorker();
+
+// ReactDOM.render( <Provider store={store}>  
+// 					<Routers />
+//     	    	</Provider>,document.getElementById('root'));
+
+
+ReactDOM.render( <Test />,document.getElementById('root'));

@@ -16,9 +16,15 @@ html,body {
 	width: 100%;
 	background: #eee;
 }
+body {
+	font-family: HiraginoSansGB, "Microsoft YaHei",PingFangSC-Regular, Helvetica, "Droid Sans", Arial, sans-serif;
+}
 input {
 	border: none;
 	outline: none;
+}
+ul,li,ol {
+	list-style-type: none;
 }
 
 .car {
@@ -91,7 +97,8 @@ input {
 }
 .product-content .on,
 .all-choose .on {
-    background: url(./images/check.png) no-repeat;
+    background-repeat: no-repeat;
+    background-image: url(../asset/images/check.png);
     background-size: 100% 100%;
     border: none !important;
 }
@@ -188,4 +195,68 @@ footer {
     line-height: 100px;
     text-align: center;
     color: #fff;
+}
+
+.header {
+	position: absolute;
+	left: 0;
+	top:0;
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	font-size: 14PX;
+	z-index: 1000;
+}
+.search{
+	width: 560px;
+	height: 55px;
+	border-radius: 10px;
+	background: #ccc;
+	text-align: center;
+	line-height: 55px;
+	margin-left: 25px;
+
+}
+.more {
+	line-height: 55px;
+	color: #999;
+}
+.swiperwrap {
+	width: 100%;
+}
+.swiperwrap img {
+	width: 100%;
+	display: block;
+}
+.homelist {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 20px;
+}
+.listPro {
+	width: 49%;
+	background: #fff;
+	margin-bottom: 20px;
+}
+.productImg {
+	width: 100%;
+	height: 345px;
+}
+.productImg img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.proTitle {
+	padding: 0 10px;
+	line-height: 1.4;
+	color: #666;
+	font-size: 14PX;
+}
+.proPrice {
+	color: #f42323;
+	margin-top: 15px;
+	margin-left: 10px;
+	display: block;
 }

@@ -157,6 +157,10 @@ module.exports = {
               // It enables caching results in ./node_modules/.cache/babel-loader/
               // directory for faster rebuilds.
               cacheDirectory: true,
+
+              "plugins": [
+                  ["import", { libraryName: "antd-mobile", style: "css" }] // 会加载 less 文件
+              ]
             },
           },
           // "postcss" loader applies autoprefixer to our CSS.
@@ -171,7 +175,9 @@ module.exports = {
               {
                 loader: require.resolve('css-loader'),
                 options: {
-                  importLoaders: 1,
+                  // modules:true,
+                  // importLoaders: 1,
+                  // localIdentName: '[name]__[local]--[hash:base64:5]',
                 },
               },
               {
@@ -198,8 +204,8 @@ module.exports = {
                       viewportHeight: 1334, // (Number) The height of the viewport. 
                       unitPrecision: 3, // (Number) The decimal numbers to allow the REM units to grow to. 
                       viewportUnit: 'vw', // (String) Expected units. 
-                      selectorBlackList: ['.ignore', '.hairlines'], // (Array) The selectors to ignore and leave as px. 
-                      minPixelValue: 2, // (Number) Set the minimum pixel value to replace. 
+                      selectorBlackList: ['.ignore', '.hairlines',/weui/], // (Array) The selectors to ignore and leave as px. 
+                      minPixelValue: 1, // (Number) Set the minimum pixel value to replace. 
                       mediaQuery: false // (Boolean) Allow px to be converted in media queries. 
                     }),
                     postcssWriteSvg({
@@ -247,6 +253,7 @@ module.exports = {
     // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
     // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     // In development, this will be an empty string.
+    
     new InterpolateHtmlPlugin(env.raw),
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
