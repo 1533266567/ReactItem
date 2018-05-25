@@ -1,40 +1,46 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { Carousel,WingBlank   } from 'antd-mobile'
-import styles from '../asset/index.css'
+import {
+    InfiniteLoader,
+    Swiper,
+    FlexItem,
+    Flex
+} from 'react-weui';
+import '../asset/index.css'
 import List from './homeList.js'
+import Footer from './footer.js'
 class Home extends React.Component {
-	state = {
-		style: {
-			width: '30px',
-			height: '30px',
-			color: 'blue'
-		}
+	constructor(props) {
+		super(props);
+		this.state = {
+            demoIndex: 0
+        };
 	}
 	render() {
 
 		return (
-			<div id="app">
-				<header className={styles.header}>
-					<span className={styles.more}>更多</span>
-					<div className={styles.search}>
+			<div className="app">
+				<header className={'header'}>
+					<span className={'more'}>更多</span>
+					<div className={'search'}>
 						<span>搜索商品</span>
 					</div>
 				</header>
-				<WingBlank >
-					<Carousel autoplay={false} dotStyle={this.state.style} infinite>
-					    <div className={styles.swiperwrap}>
-					    	<img src={require('../asset/images/s1.png')} />
-					    </div>
-					    <div className={styles.swiperwrap}>
-					    	<img src={require('../asset/images/s3.png')} />
-					    </div>
-					     <div className={styles.swiperwrap}>
-					    	<img src={require('../asset/images/s2.png')} />
-					    </div>
-					</Carousel>
-				</WingBlank>
-				<List />
+				<Swiper
+						height={180}
+                   	>
+						<div>
+							<img src={require('../asset/images/s1.png')}/>
+						</div>
+						<div>
+							<img src={require('../asset/images/s2.png')}/>
+						</div>
+						<div>
+							<img src={require('../asset/images/s3.png')}/>
+						</div>
+					</Swiper>
+					<List />
+					<Footer />
 			</div>
 		)
 	}

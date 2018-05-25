@@ -16,9 +16,6 @@ html,body {
 	width: 100%;
 	background: #eee;
 }
-body {
-	font-family: HiraginoSansGB, "Microsoft YaHei",PingFangSC-Regular, Helvetica, "Droid Sans", Arial, sans-serif;
-}
 input {
 	border: none;
 	outline: none;
@@ -27,6 +24,9 @@ ul,li,ol {
 	list-style-type: none;
 }
 
+.app {
+	padding-bottom: 110px;
+}
 .car {
 	width: 100%;
 	position: relative;
@@ -211,11 +211,12 @@ footer {
 	width: 560px;
 	height: 55px;
 	border-radius: 10px;
-	background: #ccc;
+	background: #e6e6e6;
+	opacity: 0.8;
 	text-align: center;
 	line-height: 55px;
 	margin-left: 25px;
-
+	
 }
 .more {
 	line-height: 55px;
@@ -259,4 +260,43 @@ footer {
 	margin-top: 15px;
 	margin-left: 10px;
 	display: block;
+}
+.react-weui-swiper__item img {
+	width: 100%;
+	height: 100%;
+}
+footer {
+	width: 100%;
+	height: 110px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-top: 1px solid #ccc;
+	background: #fff;
+	z-index: 9999;
+}
+.footer-wrap {
+	width: 100%;
+	padding: 20px 20px 10px;
+	display: flex;
+}
+.footer-part {
+	width: 25%;
+}
+.footer-part a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.footer-icon {
+	font-size: 40px;
+}
+.footer-item {
+	font-size: 15PX;
+	color: #666;;
+}
+.icon-on .footer-item {
+	color: #fe9e21;
+	font-weight: 600;
 }
