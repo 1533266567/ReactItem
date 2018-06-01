@@ -8,7 +8,7 @@ import { Route } from 'react-router-dom'
 class App extends React.Component {
 	render() {
 		return (
-			<div>
+			<div className="main">
 				<Route exact path="/" component={Home} />
 				<Route path="/car" component={Car} />
 				<Route path="/product" component={Product} />

@@ -216,9 +216,10 @@ module.exports = {
                     }),
                     postcssViewportUnits({}),
                     cssnano({
-                      preset: "advanced", 
+                      preset: 'default', 
                       autoprefixer: false, 
-                      "postcss-zindex": false 
+                      "postcss-zindex": false,
+                      "postcss-reduce-idents":false
                     })
 
                   ],

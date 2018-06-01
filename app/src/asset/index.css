@@ -15,6 +15,7 @@
 html,body {
 	width: 100%;
 	background: #eee;
+	position: relative;
 }
 input {
 	border: none;
@@ -24,8 +25,9 @@ ul,li,ol {
 	list-style-type: none;
 }
 
+
 .app {
-	padding-bottom: 110px;
+	padding-bottom: 40px;
 }
 .car {
 	width: 100%;
@@ -299,4 +301,95 @@ footer {
 .icon-on .footer-item {
 	color: #fe9e21;
 	font-weight: 600;
+}
+nav {
+	width: 100%;
+	background: #fff;
+}
+.nav-list {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 20px;
+}
+.nav-list li {
+	width: 20%;
+	padding: 0 20px 10px;
+}
+.nav-list li a {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.nav-img {
+	width: 90px;
+	height: 90px;
+	display: block;
+	margin: 0 auto;
+}
+.nav-text {
+	font-size: 12PX;
+	color: #333;
+	white-space:nowrap;
+}
+.banner-swiper {
+	height: 180PX;
+}
+.banner-swiper img {
+	height: 100%;
+	width: 100%;
+}
+.swiper-container {
+	height: 100%;
+	overflow: hidden;
+}
+.banner-swiper .swiper-pagination-bullet {
+	width: 16px;
+	height: 16px;
+}
+.bottom-tip {
+    padding: 1px;
+    font-size: 14PX;
+    text-align: center;
+    background: #eeeeee;
+    color: #999;
+    width: 100%;
+} 
+.loading-wrap {
+    min-height: 80px;
+    padding: 1px 0;
+    text-align: center;
+    background: #eee;
+    width: 100%;
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    perspective: 1000;
+}
+.loading-wrap .loading {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    margin-right: .2133333333rem;
+    border-bottom-color: transparent;
+    vertical-align: middle;
+    -webkit-animation: meRotate .6s linear infinite;
+    animation: meRotate .6s linear infinite;
+}
+.loading-wrap .loading-tip {
+    display: inline-block;
+    color: gray;
+    vertical-align: middle;
+}
+
+
+@keyframes meRotate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
 }
